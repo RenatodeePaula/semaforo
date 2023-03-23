@@ -4,40 +4,36 @@ const buttonVermelho = document.querySelector('.vermelho');
 const buttonAmarelo = document.querySelector('.amarelo');
 const buttonVerde = document.querySelector('.verde');
 
-buttonAuto.addEventListener('click', auto);
- 
+// buttonAuto.addEventListener('click', gutu); 
 buttonVermelho.addEventListener('click',verm);
 buttonAmarelo.addEventListener('click', amar);
 buttonVerde.addEventListener('click', verd);
 
-function verm() {
-    clearInterval(interval)
+function verm(a) {  
+    clearInterval(a)
     body.style.background = "red";
 }
 
-function amar() {
-    clearInterval(interval)
+function amar() {    
     body.style.background = "yellow";
 }
 
-function verd() {
-    clearInterval(interval)
+function verd() {    
     body.style.background = "green";
 }
 
-function auto() {
-    let interval = setInterval(funcMudandoCor, 560);
-
-    function funcMudandoCor(){
-        if (body.style.background == 'red') {
-            body.style.background = 'yellow'    
-           
-        } else if (body.style.background == 'yellow'){
-            body.style.background = 'green'    
-
-        } else {
-            body.style.background = 'red'    
-        }   
-    }
-    
+function gutu(){
+    setInterval(() => {
+    if (body.style.background == 'red') {
+        body.style.background = 'yellow'               
+    } else if (body.style.background == 'yellow'){
+        body.style.background = 'green'   
+    } else {
+        body.style.background = 'red'    
+    }   
 }
+, 550) 
+} 
+
+
+
