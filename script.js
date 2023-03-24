@@ -4,13 +4,13 @@ const buttonVermelho = document.querySelector('.vermelho');
 const buttonAmarelo = document.querySelector('.amarelo');
 const buttonVerde = document.querySelector('.verde');
 
-// buttonAuto.addEventListener('click', gutu); 
+buttonAuto.addEventListener('click', auto); 
 buttonVermelho.addEventListener('click',verm);
 buttonAmarelo.addEventListener('click', amar);
 buttonVerde.addEventListener('click', verd);
 
-function verm(a) {  
-    clearInterval(a)
+function verm() {
+    
     body.style.background = "red";
 }
 
@@ -22,18 +22,22 @@ function verd() {
     body.style.background = "green";
 }
 
-function gutu(){
+function auto(){
     setInterval(() => {
     if (body.style.background == 'red') {
         body.style.background = 'yellow'               
     } else if (body.style.background == 'yellow'){
         body.style.background = 'green'   
     } else {
-        body.style.background = 'red'    
+        body.style.background = 'red'   
     }   
 }
 , 550) 
 } 
+
+
+
+
 
 
 
