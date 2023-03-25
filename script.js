@@ -3,34 +3,38 @@ const buttonAuto = document.querySelector('.auto');
 const buttonVermelho = document.querySelector('.vermelho');
 const buttonAmarelo = document.querySelector('.amarelo');
 const buttonVerde = document.querySelector('.verde');
-
+let stop = ''
 buttonAuto.addEventListener('click', auto); 
 buttonVermelho.addEventListener('click',verm);
 buttonAmarelo.addEventListener('click', amar);
 buttonVerde.addEventListener('click', verd);
 
-function verm() {
-    
+function verm() {  
+    clearInterval(stop)   
     body.style.background = "red";
 }
 
-function amar() {    
+function amar() {
+    clearInterval(stop)         
     body.style.background = "yellow";
 }
 
-function verd() {    
+function verd() { 
+    clearInterval(stop)   
     body.style.background = "green";
 }
 
 function auto(){
-    setInterval(() => {
+    clearInterval(stop)   
+    stop = setInterval(() => {
     if (body.style.background == 'red') {
         body.style.background = 'yellow'               
     } else if (body.style.background == 'yellow'){
         body.style.background = 'green'   
     } else {
         body.style.background = 'red'   
-    }   
+    }  
+  
 }
 , 550) 
 } 
